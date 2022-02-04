@@ -281,6 +281,7 @@ export default function NearbySearch({ nearby, user }) {
                       icon={farHeart}
                       size="2x"
                       className="favourite-heart"
+                      cursor="pointer"
                       onClick={() => {
                         addFavourite(place);
                         likePlace(place);
@@ -290,15 +291,13 @@ export default function NearbySearch({ nearby, user }) {
                   {place.favourite && <p>Added to Favourites!</p>}
 
                   <li>
-                    <p>Share with a friend:</p>
-                    <WhatsappShareButton>
-                      <FontAwesomeIcon
-                        icon={faWhatsapp}
-                        size="2x"
-                        className="favourite-heart"
-                      />
-                    </WhatsappShareButton>
-                    <EmailShareButton>
+                    <EmailShareButton
+                      subject={`Directions to ${place.name}`}
+                      body="working on getting a link to directions in here"
+                      separator=" 
+                      "
+                      url={place.url}
+                    >
                       <FontAwesomeIcon
                         icon={faEnvelope}
                         size="2x"
