@@ -11,10 +11,15 @@ import Fade from "react-reveal/Fade";
 
 export default function Favourites() {
   let [loading, setLoading] = useState(false);
+  //loading state of main page
   let [user, setUser] = useState({});
+  //user state, which will be sent an object (login, I presume)
   let [favourites, setFavourites] = useState([]);
+  //favourites variable, probably accepts form
   let [showRatings, setShowRatings] = useState(false);
+  //
   let [starRating, setStarRating] = useState(false);
+
   let [ratingValue, setRatingValue] = useState([
     { place_id: 0, name: "", rating: "" },
   ]);
@@ -40,6 +45,7 @@ export default function Favourites() {
   let [DBRatings, setDBRatings] = useState({});
   let [DBRecommendations, setDBRecommendations] = useState("");
 
+  //triggers the getFavourites function
   useEffect(() => {
     getFavourites();
   }, [user]);
@@ -52,7 +58,7 @@ export default function Favourites() {
     setUser(currentUser);
   });
 
-  console.log(ref);
+  console.log("here are the faves", ref);
   console.log(ref2);
 
   const getFavourites = async () => {
