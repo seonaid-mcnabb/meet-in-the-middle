@@ -236,6 +236,7 @@ export default function Favourites() {
                   <h6>Remove from Favourites</h6>
                 </li>
               </ul>
+
               <div className="ratings">
                 {!favourite.favourite && (
                   <li className="favourites-info">
@@ -263,221 +264,226 @@ export default function Favourites() {
                     </p>
                   </li>
                 )}
-                <form
-                  className="ratings-show"
-                  onSubmit={(e) => handleOnSubmit(e)}
-                >
-                  {favourite.favourite &&
-                    [...Array(5)].map((star, i) => {
-                      // displays the ratings system - class changes and fills the star with colour when clicked
-                      i += 1;
-                      return (
-                        <button
-                          type="button"
-                          key={i}
-                          className={
-                            favourite.stars && i <= ratingValue.rating
-                              ? "on"
-                              : "off"
-                          }
-                          onClick={(e) => {
-                            setRatingValue({
-                              place_id: favourite.id,
-                              name: favourite.name,
-                              rating: i,
-                            });
-                            ratePlace(favourite);
-                          }}
+
+                {favourite.favourite && showRatings === true ? (
+                  <form
+                    className="ratings-show"
+                    onSubmit={(e) => handleOnSubmit(e)}
+                  >
+                    {favourite.favourite &&
+                      [...Array(5)].map((star, i) => {
+                        // displays the ratings system - class changes and fills the star with colour when clicked
+                        i += 1;
+                        return (
+                          <button
+                            type="button"
+                            key={i}
+                            className={
+                              favourite.stars && i <= ratingValue.rating
+                                ? "on"
+                                : "off"
+                            }
+                            onClick={(e) => {
+                              setRatingValue({
+                                place_id: favourite.id,
+                                name: favourite.name,
+                                rating: i,
+                              });
+                              ratePlace(favourite);
+                            }}
+                            required
+                          >
+                            <div>
+                              <FontAwesomeIcon
+                                icon={faStar}
+                                className="rating-stars"
+                                size="2x"
+                              />
+                            </div>
+                          </button>
+                        );
+                      })}
+                    {favourite.favourite && (
+                      <div>
+                        <h6>Please give this place an overall rating</h6>{" "}
+                        (required)
+                        <select
                           required
+                          className="form-select"
+                          onChange={(e) => {
+                            const selectedPrice = e.target.value;
+                            setPriceRange({ selectedPrice });
+                          }}
                         >
-                          <div>
-                            <FontAwesomeIcon
-                              icon={faStar}
-                              className="rating-stars"
-                              size="2x"
-                            />
-                          </div>
+                          <option value="" aria-label="Default select example">
+                            Price Range
+                          </option>
+                          <option value="£">£</option>
+                          <option value="££">££</option>
+                          <option value="£££">£££</option>
+                          <option value="££££">££££</option>
+                        </select>
+                        <h6>Recommendations:</h6>
+                        <li className="recommendations">
+                          <input
+                            type="checkbox"
+                            name="recommendations"
+                            value="food_quality"
+                            onChange={(e) => handleOnChange(e)}
+                          />
+                          <label htmlFor="recommendation1">Food quality</label>
+                        </li>
+                        <li className="recommendations">
+                          <input
+                            type="checkbox"
+                            name="recommendations"
+                            value="customer_service"
+                            onChange={(e) => handleOnChange(e)}
+                          />
+                          <label htmlFor="recommendation2">
+                            Customer service
+                          </label>
+                        </li>
+                        <li className="recommendations">
+                          <input
+                            type="checkbox"
+                            name="recommendations"
+                            value="cleanliness"
+                            onChange={(e) => handleOnChange(e)}
+                          />
+                          <label htmlFor="recommendation3">Cleanliness</label>
+                        </li>
+                        <li className="recommendations">
+                          <input
+                            type="checkbox"
+                            name="recommendations"
+                            value="access_and_facilities"
+                            onChange={(e) => handleOnChange(e)}
+                          />
+                          <label htmlFor="recommendation4">
+                            Access and facilities
+                          </label>
+                        </li>
+                        <li className="recommendations">
+                          <input
+                            type="checkbox"
+                            name="recommendations"
+                            value="pet_friendly"
+                            onChange={(e) => handleOnChange(e)}
+                          />
+                          <label htmlFor="recommendation5">Pet friendly</label>
+                        </li>
+                        <li className="recommendations">
+                          <input
+                            type="checkbox"
+                            name="recommendations"
+                            value="vibe"
+                            onChange={(e) => handleOnChange(e)}
+                          />
+                          <label htmlFor="recommendation6">
+                            Vibe/atmosphere
+                          </label>
+                        </li>
+                        <li className="recommendations">
+                          <input
+                            type="checkbox"
+                            name="recommendations"
+                            value="capacity"
+                            onChange={(e) => handleOnChange(e)}
+                          />
+                          <label htmlFor="recommendation7">Capacity</label>
+                        </li>
+                        <li className="recommendations">
+                          <input
+                            type="checkbox"
+                            name="recommendations"
+                            value="date_nights"
+                            onChange={(e) => handleOnChange(e)}
+                          />
+                          <label htmlFor="recommendation8">Date nights</label>
+                        </li>
+                        <li className="recommendations">
+                          <input
+                            type="checkbox"
+                            name="recommendations"
+                            value="work_meetings"
+                            onChange={(e) => handleOnChange(e)}
+                          />
+                          <label htmlFor="recommendation9">Work meetings</label>
+                        </li>
+                        <li className="recommendations">
+                          <input
+                            type="checkbox"
+                            name="recommendations"
+                            value="noise_level"
+                            onChange={(e) => handleOnChange(e)}
+                          />
+                          <label htmlFor="recommendation10">Noise level</label>
+                        </li>
+                        <li className="recommendations">
+                          <input
+                            type="checkbox"
+                            name="recommendations"
+                            value="drinks_menu"
+                            onChange={(e) => handleOnChange(e)}
+                          />
+                          <label htmlFor="recommendation11">Drinks menu</label>
+                        </li>
+                        <li className="recommendations">
+                          <input
+                            type="checkbox"
+                            name="recommendations"
+                            value="coffee"
+                            onChange={(e) => handleOnChange(e)}
+                          />
+                          <label htmlFor="recommendation12">Coffee</label>
+                        </li>
+                        <li className="recommendations">
+                          <input
+                            type="checkbox"
+                            name="recommendations"
+                            value="comfortable_seating"
+                            onChange={(e) => handleOnChange(e)}
+                          />
+                          <label htmlFor="recommendation13">
+                            Comfortable seating
+                          </label>
+                        </li>
+                        <li className="recommendations">
+                          <input
+                            type="checkbox"
+                            name="recommendations"
+                            value="vegan_and_veggie_options"
+                            onChange={(e) => handleOnChange(e)}
+                          />
+                          <label htmlFor="recommendation14">
+                            Vegan/veggie/dietary options
+                          </label>
+                        </li>
+                        <button
+                          type="submit"
+                          className="ratings-btn"
+                          value="submit"
+                        >
+                          Submit
                         </button>
-                      );
-                    })}
-                  {favourite.favourite && (
-                    <div>
-                      <h6>Please give this place an overall rating</h6>{" "}
-                      (required)
-                      <select
-                        required
-                        className="form-select"
-                        onChange={(e) => {
-                          const selectedPrice = e.target.value;
-                          setPriceRange({ selectedPrice });
-                        }}
-                      >
-                        <option value="" aria-label="Default select example">
-                          Price Range
-                        </option>
-                        <option value="£">£</option>
-                        <option value="££">££</option>
-                        <option value="£££">£££</option>
-                        <option value="££££">££££</option>
-                      </select>
-                      <h6>Recommendations:</h6>
-                      <li className="recommendations">
-                        <input
-                          type="checkbox"
-                          name="recommendations"
-                          value="food_quality"
-                          onChange={(e) => handleOnChange(e)}
-                        />
-                        <label htmlFor="recommendation1">Food quality</label>
-                      </li>
-                      <li className="recommendations">
-                        <input
-                          type="checkbox"
-                          name="recommendations"
-                          value="customer_service"
-                          onChange={(e) => handleOnChange(e)}
-                        />
-                        <label htmlFor="recommendation2">
-                          Customer service
-                        </label>
-                      </li>
-                      <li className="recommendations">
-                        <input
-                          type="checkbox"
-                          name="recommendations"
-                          value="cleanliness"
-                          onChange={(e) => handleOnChange(e)}
-                        />
-                        <label htmlFor="recommendation3">Cleanliness</label>
-                      </li>
-                      <li className="recommendations">
-                        <input
-                          type="checkbox"
-                          name="recommendations"
-                          value="access_and_facilities"
-                          onChange={(e) => handleOnChange(e)}
-                        />
-                        <label htmlFor="recommendation4">
-                          Access and facilities
-                        </label>
-                      </li>
-                      <li className="recommendations">
-                        <input
-                          type="checkbox"
-                          name="recommendations"
-                          value="pet_friendly"
-                          onChange={(e) => handleOnChange(e)}
-                        />
-                        <label htmlFor="recommendation5">Pet friendly</label>
-                      </li>
-                      <li className="recommendations">
-                        <input
-                          type="checkbox"
-                          name="recommendations"
-                          value="vibe"
-                          onChange={(e) => handleOnChange(e)}
-                        />
-                        <label htmlFor="recommendation6">Vibe/atmosphere</label>
-                      </li>
-                      <li className="recommendations">
-                        <input
-                          type="checkbox"
-                          name="recommendations"
-                          value="capacity"
-                          onChange={(e) => handleOnChange(e)}
-                        />
-                        <label htmlFor="recommendation7">Capacity</label>
-                      </li>
-                      <li className="recommendations">
-                        <input
-                          type="checkbox"
-                          name="recommendations"
-                          value="date_nights"
-                          onChange={(e) => handleOnChange(e)}
-                        />
-                        <label htmlFor="recommendation8">Date nights</label>
-                      </li>
-                      <li className="recommendations">
-                        <input
-                          type="checkbox"
-                          name="recommendations"
-                          value="work_meetings"
-                          onChange={(e) => handleOnChange(e)}
-                        />
-                        <label htmlFor="recommendation9">Work meetings</label>
-                      </li>
-                      <li className="recommendations">
-                        <input
-                          type="checkbox"
-                          name="recommendations"
-                          value="noise_level"
-                          onChange={(e) => handleOnChange(e)}
-                        />
-                        <label htmlFor="recommendation10">Noise level</label>
-                      </li>
-                      <li className="recommendations">
-                        <input
-                          type="checkbox"
-                          name="recommendations"
-                          value="drinks_menu"
-                          onChange={(e) => handleOnChange(e)}
-                        />
-                        <label htmlFor="recommendation11">Drinks menu</label>
-                      </li>
-                      <li className="recommendations">
-                        <input
-                          type="checkbox"
-                          name="recommendations"
-                          value="coffee"
-                          onChange={(e) => handleOnChange(e)}
-                        />
-                        <label htmlFor="recommendation12">Coffee</label>
-                      </li>
-                      <li className="recommendations">
-                        <input
-                          type="checkbox"
-                          name="recommendations"
-                          value="comfortable_seating"
-                          onChange={(e) => handleOnChange(e)}
-                        />
-                        <label htmlFor="recommendation13">
-                          Comfortable seating
-                        </label>
-                      </li>
-                      <li className="recommendations">
-                        <input
-                          type="checkbox"
-                          name="recommendations"
-                          value="vegan_and_veggie_options"
-                          onChange={(e) => handleOnChange(e)}
-                        />
-                        <label htmlFor="recommendation14">
-                          Vegan/veggie/dietary options
-                        </label>
-                      </li>
-                      <button
-                        type="submit"
-                        className="ratings-btn"
-                        value="submit"
-                      >
-                        Submit
-                      </button>
-                      {ratingPosted ? (
-                        <p>
-                          <em>Rating submitted!</em>
-                        </p>
-                      ) : null}
-                      {ratingPosted ? (
-                        <p
-                          className="rating-link"
-                          onClick={() => removeRating(favourite)}
-                        >
-                          Undo?
-                        </p>
-                      ) : null}
-                    </div>
-                  )}
-                </form>
+                        {ratingPosted ? (
+                          <p>
+                            <em>Rating submitted!</em>
+                          </p>
+                        ) : null}
+                        {ratingPosted ? (
+                          <p
+                            className="rating-link"
+                            onClick={() => removeRating(favourite)}
+                          >
+                            Undo?
+                          </p>
+                        ) : null}
+                      </div>
+                    )}
+                  </form>
+                ) : null}
               </div>
             </div>
           </Fade>

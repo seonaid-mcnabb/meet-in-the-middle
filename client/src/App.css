@@ -715,6 +715,7 @@ h3 {
 
 .remove-link:hover {
   color: #77c29e;
+  cursor: pointer;
 }
 
 .rating-arrow {

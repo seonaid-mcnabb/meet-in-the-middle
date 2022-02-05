@@ -9,15 +9,7 @@ import {
 import { faHeart as farHeart } from "@fortawesome/free-regular-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
-import {
-  EmailShareButton,
-  FacebookShareButton,
-  WhatsappShareButton,
-  EmailIcon,
-  FacebookIcon,
-  FacebookMessengerIcon,
-  WhatsappIcon,
-} from "react-share";
+import { EmailShareButton } from "react-share";
 
 //this has imported nearby and user as props
 export default function NearbySearch({ nearby, user }) {
