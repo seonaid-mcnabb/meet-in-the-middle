@@ -178,6 +178,7 @@ export default function Favourites() {
     });
     console.log(userRating);
     setRatingPosted(true);
+    setShowRatings(false);
   };
 
   const ratePlace = (favourite) => {
