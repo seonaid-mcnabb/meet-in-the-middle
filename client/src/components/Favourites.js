@@ -521,6 +521,7 @@ export default function Favourites() {
                       // this code basically looks at the recommendations object and returns the keys where the values are 1. the values are set to 1 above if the user has ticked the boxes - i searched high and low for this solution                            return (
                       <div>
                         <b>{value === 1 && key.split("_").join(" ")}</b>
+                        {console.log(key)}
                       </div>; //)
                     }
                   )}
