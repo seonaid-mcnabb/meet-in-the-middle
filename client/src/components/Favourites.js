@@ -239,25 +239,24 @@ export default function Favourites() {
               </ul>
 
               <div className="ratings">
-                {!favourite.favourite && (
+                {favourite.favourite && showRatings === false ? (
                   <li className="favourites-info">
                     Rate this place
                     <p>
                       <FontAwesomeIcon
-                        icon={faChevronDown}
+                        icon={faChevronUp}
                         className="rating-arrow"
                         size="2x"
                         onClick={() => toggleRatings(favourite)}
                       />
                     </p>
                   </li>
-                )}
-                {favourite.favourite && (
+                ) : (
                   <li className="favourites-info">
                     Rate this place
                     <p>
                       <FontAwesomeIcon
-                        icon={faChevronUp}
+                        icon={faChevronDown}
                         className="rating-arrow"
                         size="2x"
                         onClick={() => toggleRatings(favourite)}
