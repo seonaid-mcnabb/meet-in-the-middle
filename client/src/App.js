@@ -14,6 +14,7 @@ import LogoNav from "./components/LogoNav";
 import Map from "./components/Map";
 import NearbySearch from "./components/NearbySearch";
 import Fade from "react-reveal/Fade";
+import useLocalStorage from "use-local-storage"; //imported for the purpose of toggling light/dark themes
 
 //this app function:
 //contains all logic for determing and setting user
