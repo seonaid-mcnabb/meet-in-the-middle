@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 import { configure } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import About from "./About";
-
+//test commit
 configure({ adapter: new Adapter() });
 
 describe("Testing the About Me Component", () => {
