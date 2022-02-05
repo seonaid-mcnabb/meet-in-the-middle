@@ -156,6 +156,8 @@ const firebaseConfig = {
 ### **Your Firebase backend should now run as expected!**
 &nbsp;
 
+## Notes About Testing
+This project uses Jest and Enzyme for testing. Jest is a Javascript testing framework, and Enzyme helps to simplify test-writing.
 ## Next steps
 
 _This is a student project that was created at [CodeOp](http://codeop.tech), a full stack development bootcamp in Barcelona._ I'd love to hear any feedback or suggestions on how to take the app further - please get in touch if you have any. I'm a beginner so please be kind :D
