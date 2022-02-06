@@ -13,20 +13,79 @@ code {
 }
 
 :root {
-  /*Contains default values for light them on intro page*/
+  /*Contains default values for light them3 on intro page*/
   --intro-message-background: #f7f1d5;
   --intro-message-text: rgba(98, 55, 28, 0.85);
   --intro-button-background: #f7f1d5;
   --intro-button-border: 2px solid #77c29e;
   --intro-button-text-color: #62371c;
   --intro-button-hover-background: #77c29e;
+
+  /*Contains default values for light theme on login page*/
+  --login-container-background: rgba(247, 241, 213, 0.95);
+  --login-form-container-background: #77c29e;
+  --login-form-h4: #62371c;
+  --login-box-shadow: 6px 6px #62371c;
+  --login-btn-background: #62371c;
+  --login-btn-text-color: #f7f1d5;
+  --login-btn-border: 2px solid #77c29e;
+  --login-error-msg: #62371c;
+  --login-account-link: #62371c;
+  --login-btn-hover-background: #f7f1d5;
+  --login-btn-hover-border: 2px solid #77c29e;
+  --login-btn-hover-text: #62371c;
+  --login-with-google-background-color: white;
+  --login-with-google-text-color: #757575;
+  --login-google-box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04),
+    0 1px 1px rgba(0, 0, 0, 0.25);
+  --click-google-background-color: #eeeeee;
+  --click-google-border-color: 0 -1px 0 rgba(0, 0, 0, 0.04),
+    0 2px 4px rgba(0, 0, 0, 0.25), 0 0 0 3px #c8dafc;
+
+  /*Contains default values for light theme on login inputs*/
+  --input-bkgrnd-color-default: white;
+  --input-border-default: 1px solid rgb(63, 31, 11);
+  --input-placeholder-color: black;
+  --input-on-focus-text-color: black;
+  --input-on-focus-background: rgb(214, 131, 79);
+  --input-on-focus-border: 2px solid #62371c;
+  --input-on-focus-box-shadow: 0 0 3px #9b1f00;
 }
 [data-theme="dark"] {
-  /*Contains default values for light them on intro page*/
+  /*Contains default values for dark them on intro page*/
   --intro-message-background: rgba(24, 13, 7, 0.85);
   --intro-message-text: white;
   --intro-button-background: rgba(36, 16, 4, 0.85);
-  --intro-button-border: 2px solid #6ef1a5;
+  --intro-button-border: 1px solid rgb(214, 131, 79);
   --intro-button-text-color: white;
   --intro-button-hover-background: rgba(19, 7, 1, 0.918);
+
+  /*Contains default values for dark theme on login page*/
+  --login-container-background: rgba(24, 13, 7, 0.9);
+  --login-form-container-background: rgb(36, 16, 4, 0.9);
+  --login-form-h4: white;
+  --login-box-shadow: 6px 6px rgb(0, 0, 0, 0.75);
+  --login-btn-background: rgba(36, 16, 4, 0.85);
+  --login-btn-text-color: white;
+  --login-btn-border: 1px solid rgb(214, 131, 79);
+  --login-error-msg: white;
+  --login-account-link: white;
+  --login-btn-hover-background: rgba(19, 7, 1, 0.918);
+  --login-btn-hover-border: 1px solid rgb(214, 131, 79);
+  --login-btn-hover-text: white;
+  --login-with-google-background-color: rgba(19, 7, 1, 0.918);
+  --login-with-google-text-color: white;
+  --login-google-box-shadow: white;
+  --click-google-background-color: black;
+  --click-google-border-color: 0 -1px 0 rgba(0, 0, 0, 0.04),
+    0 2px 4px rgba(0, 0, 0, 0.25), 0 0 0 2px rgb(255, 163, 106);
+
+  /*Contains Styling Values for dark theme login input boxes*/
+  --input-bkgrnd-color-default: rgba(19, 7, 1, 0.918);
+  --input-border-default: 1px solid rgb(214, 131, 79);
+  --input-placeholder-color: #77c29e;
+  --input-on-focus-text-color: white;
+  --input-on-focus-background: rgba(19, 7, 1, 0.918);
+  --input-on-focus-border: 2px solid rgb(214, 131, 79);
+  --input-on-focus-box-shadow: 0 0 3px #9b1f00;
 }

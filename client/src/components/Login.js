@@ -9,8 +9,23 @@ import {
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import Logo from "../images/meet-logo.png";
 import Fade from "react-reveal/Fade";
+import useLocalStorage from "use-local-storage"; //imported for the purpose of toggling light/dark themes
 
 export default function Login() {
+  //for testing purposes, have imported these here but think
+  //they can be removed at a later time (mode should be chose on homepage?)
+  let defaultDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  let [theme, setTheme] = useLocalStorage(
+    "theme",
+    defaultDark ? "dark" : "light"
+  );
+
+  const switchTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+  };
+  //
+
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
   const [loginEmail, setLoginEmail] = useState("");
@@ -76,7 +91,7 @@ export default function Login() {
   };
 
   return (
-    <div className="login-body">
+    <div className="login-body" data-theme={theme}>
       <div className="login-container">
         <Fade bottom>
           <img src={Logo} className="login-logo" alt="" />
