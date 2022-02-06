@@ -7,12 +7,12 @@ body {
 /* NAVBAR STYLING */
 /*Contains the stlying for navigation bar*/
 .navbar {
-  background-color: #f7f1d5 !important;
+  background-color: var(--navbar-background-color) !important;
   padding-right: 20px;
 }
 
 /*Contains styling for the logo
-Adds it to the left
+Adds it to the left 
 Adjusts width
 Pushes slightly away from edge of page on left*/
 .logo-image {
@@ -29,6 +29,11 @@ alignment, and margin on bottom*/
   margin-bottom: 10px;
 }
 
+/*added this. used in code but not in CSS originally*/
+.nav-link {
+  color: var(--navbar-link-color) !important;
+}
+
 /*Adjusts the greeting area
 Keeps user's name or email in same place
 Adjusts how text is displayed
@@ -39,6 +44,7 @@ Adjusts how text is displayed
   right: 0%;
   padding: 10px 10px 0px 0px;
   font-weight: 300;
+  color: var(--navbar-greeting-color);
 }
 
 /*Styles logout button to left of user greeting
@@ -50,15 +56,15 @@ adjusts colors, position, text style, transition*/
   margin-left: 10px;
   text-transform: uppercase;
   transition: 0.5s;
-  border: 2px solid #77c29e;
+  border: var(--logout-button-border);
   margin-right: 10px;
-  background-color: #f7f1d5 !important;
-  color: #62371c !important;
+  background-color: var(--logout-button-background-color) !important;
+  color: var(--logout-button-text-color) !important;
 }
 
 /*Determines color change on hover*/
 .logout-button:hover {
-  background-color: #77c29e !important;
+  background-color: var(--logout-button-hover-color) !important;
   color: #f7f1d5 !important;
 }
 
@@ -81,6 +87,10 @@ applies to body of return function in App.js*/
   /* height: 2700px; */
 }
 
+label {
+  color: var(--homepage-input-form-label-color);
+}
+
 /*Styles homepage container
 (the greenish box behind the input form)
 */
@@ -88,7 +98,7 @@ applies to body of return function in App.js*/
   padding: 50px;
   text-align: center;
   margin: 0 auto;
-  background-color: rgba(119, 194, 158, 0.95);
+  background-color: var(--homepage-container-background);
   margin-top: 90px;
   padding-bottom: 300px;
   /* margin-right: 30px;
@@ -98,30 +108,30 @@ applies to body of return function in App.js*/
 /*Styles form container
 */
 .input-form {
-  background-color: #f7f1d5;
+  background-color: var(--homepage-input-form-container-background);
   padding: 20px;
   margin-top: 50px;
-  box-shadow: 3px 3px #62371c;
+  box-shadow: var(--homepage-input-form-box-shadow);
 }
 
 /*Styles the search button under form input
 */
 .search-btn {
-  color: #62371c;
+  color: var(--homepage-search-button-text);
   text-align: center;
-  background-color: #f7f1d5;
+  background-color: var(--homepage-search-button-background);
   width: 100px;
   margin-top: 10px;
   text-transform: uppercase;
   transition: 0.5s;
-  border: 2px solid #77c29e;
+  border: var(--homepage-search-button-border);
 }
 
 /*Styles the hover behavior of the search button
 */
 .search-btn:hover {
-  color: #f7f1d5;
-  background-color: #77c29e;
+  color: var (--homepage-search-hover-text);
+  background-color: var(--homepage-search-hover-background);
 }
 
 /*Not totally sure, seems to style background
@@ -137,9 +147,23 @@ input {
 */
 select.form-select {
   font-size: 13px;
+  color: var(--homepage-select-form-text-color);
   padding-top: 7px;
   padding-bottom: 10px;
+  background-color: var(--homepage-select-form-background);
+  border: var(--homepage-select-form-border-color);
 }
+
+select.form-select:focus {
+  color: var(--input-on-focus-text-color);
+  background: var(--input-on-focus-background);
+  border: var(--input-on-focus-border);
+  border-radius: 10px;
+  box-shadow: var(--input-on-focus-box-shadow);
+  outline-offset: 0px;
+  outline: none;
+}
+
 /*Styles font size in drop-down menu
 */
 option {
@@ -438,6 +462,7 @@ html {
   background: var(--input-bkgrnd-color-default);
   border: var(--input-border-default);
   border-radius: 10px;
+  color: var(--input-text-color-default);
 }
 
 .form-control::placeholder {

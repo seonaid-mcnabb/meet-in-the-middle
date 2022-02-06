@@ -13,6 +13,15 @@ code {
 }
 
 :root {
+  /*Contains default values for light theme on logonav component*/
+  --navbar-background-color: #f7f1d5;
+  --navbar-link-color: #62371c;
+  --navbar-greeting-color: #62371c;
+  --logout-button-text-color: #62371c;
+  --logout-button-border: 2px solid #77c29e;
+  --logout-button-background-color: #f7f1d5;
+  --logout-button-hover-color: #77c29e;
+
   /*Contains default values for light them3 on intro page*/
   --intro-message-background: #f7f1d5;
   --intro-message-text: rgba(98, 55, 28, 0.85);
@@ -45,13 +54,38 @@ code {
   /*Contains default values for light theme on login inputs*/
   --input-bkgrnd-color-default: white;
   --input-border-default: 1px solid rgb(63, 31, 11);
+  --input-text-color-default: black;
   --input-placeholder-color: black;
   --input-on-focus-text-color: black;
-  --input-on-focus-background: rgb(214, 131, 79);
+  --input-on-focus-background: white;
   --input-on-focus-border: 2px solid #62371c;
   --input-on-focus-box-shadow: 0 0 3px #9b1f00;
+
+  /*Contains default values for light theme on hompage*/
+  --homepage-container-background: rgba(119, 194, 158, 0.95);
+  --homepage-input-form-container-background: #f7f1d5;
+  --homepage-input-form-box-shadow: 3px 3px #62371c;
+  --homepage-input-form-label-color: #62371c;
+
+  --homepage-search-button-text: #62371c;
+  --homepage-search-button-background: #f7f1d5;
+  --homepage-search-button-border: 2px solid #77c29e;
+  --homepage-search-hover-text: #f7f1d5;
+  --homepage-search-hover-background: #77c29e;
+  --homepage-select-form-background: white;
+  --homepage-select-form-text-color: black;
+  --homepage-select-form-border-color: 1px solid black;
 }
 [data-theme="dark"] {
+  /*Contains default values for dark theme on logonav component*/
+  --navbar-background-color: rgba(24, 13, 7);
+  --navbar-link-color: white;
+  --navbar-greeting-color: white;
+  --logout-button-text-color: white;
+  --logout-button-border: 1px solid rgb(59, 32, 15);
+  --logout-button-background-color: #3f996d;
+  --logout-button-hover-color: #3d7e5e;
+
   /*Contains default values for dark them on intro page*/
   --intro-message-background: rgba(24, 13, 7, 0.85);
   --intro-message-text: white;
@@ -83,9 +117,23 @@ code {
   /*Contains Styling Values for dark theme login input boxes*/
   --input-bkgrnd-color-default: rgba(19, 7, 1, 0.918);
   --input-border-default: 1px solid rgb(214, 131, 79);
-  --input-placeholder-color: #77c29e;
+  --input-text-color-default: white;
+  --input-placeholder-color: white;
   --input-on-focus-text-color: white;
   --input-on-focus-background: rgba(19, 7, 1, 0.918);
   --input-on-focus-border: 2px solid rgb(214, 131, 79);
   --input-on-focus-box-shadow: 0 0 3px #9b1f00;
+  /*Contains default values for dark theme on hompage*/
+  --homepage-container-background: rgba(24, 13, 7, 0.9);
+  --homepage-input-form-container-background: rgb(36, 16, 4, 0.9);
+  --homepage-input-form-box-shadow: 6px 6px rgb(0, 0, 0, 0.75);
+  --homepage-input-form-label-color: white;
+  --homepage-search-button-text: white;
+  --homepage-search-button-background: rgba(36, 16, 4, 0.85);
+  --homepage-search-button-border: 1px solid rgb(214, 131, 79);
+  --homepage-search-hover-text: white;
+  --homepage-search-hover-background: rgba(19, 7, 1, 0.918);
+  --homepage-select-form-background: rgba(19, 7, 1, 0.918);
+  --homepage-select-form-text-color: white;
+  --homepage-select-form-border-color: 1px solid rgb(214, 131, 79);
 }

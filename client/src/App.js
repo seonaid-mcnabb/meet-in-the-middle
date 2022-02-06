@@ -14,12 +14,27 @@ import LogoNav from "./components/LogoNav";
 import Map from "./components/Map";
 import NearbySearch from "./components/NearbySearch";
 import Fade from "react-reveal/Fade";
+import useLocalStorage from "use-local-storage"; //imported for the purpose of toggling light/dark themes
 
 //this app function:
 //contains all logic for determing and setting user
 //determing and setting midpoint and associated nearby POI
 //^^sends detailed data to nearby search page
 function App() {
+  //for testing purposes, have imported these here but think
+  //they can be removed at a later time (mode should be chose on homepage?)
+  let defaultDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  let [theme, setTheme] = useLocalStorage(
+    "theme",
+    defaultDark ? "dark" : "light"
+  );
+
+  const switchTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+  };
+  //
+
   let [loading, setLoading] = useState(false);
   //loading state
   let [user, setUser] = useState({});
@@ -302,7 +317,7 @@ function App() {
   };
 
   return (
-    <body className="home-body">
+    <body className="home-body" data-theme={theme}>
       <div>
         <LogoNav />
         <Fade bottom>
