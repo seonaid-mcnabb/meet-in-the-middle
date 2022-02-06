@@ -322,7 +322,8 @@ h5 {
 
 /*styles the text that says "meet in the middle and discover somewhere new"*/
 .intro-text {
-  background-color: #f7f1d5;
+  background-color: var(--intro-message-background);
+  color: var(--intro-message-text);
   position: absolute;
   left: 0;
   right: 0;
@@ -342,20 +343,20 @@ html {
 
 /*styles the appearance of the intro button*/
 .intro-button {
-  color: #62371c;
+  color: var(--intro-button-text-color);
   text-align: center;
-  background-color: #f7f1d5;
+  background-color: var(--intro-button-background);
   width: 150px;
   margin-top: 10px;
   text-transform: uppercase;
   transition: 0.5s;
-  border: 2px solid #77c29e;
+  border: var(--intro-button-border);
 }
 
 /*adjusts behavior of intro button on hover*/
 .intro-button:hover {
   color: #f7f1d5;
-  background-color: #77c29e;
+  background-color: var(--intro-button-hover-background);
 }
 
 /*adjusts heigh of intro image

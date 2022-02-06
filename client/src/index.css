@@ -13,14 +13,20 @@ code {
 }
 
 :root {
-  --background: white;
-  --text-primary: black;
-  --text-secondary: royalblue;
-  --accent: purple;
+  /*Contains default values for light them on intro page*/
+  --intro-message-background: #f7f1d5;
+  --intro-message-text: rgba(98, 55, 28, 0.85);
+  --intro-button-background: #f7f1d5;
+  --intro-button-border: 2px solid #77c29e;
+  --intro-button-text-color: #62371c;
+  --intro-button-hover-background: #77c29e;
 }
 [data-theme="dark"] {
-  --background: black;
-  --text-primary: white;
-  --text-secondary: grey;
-  --accent: darkred;
+  /*Contains default values for light them on intro page*/
+  --intro-message-background: rgba(24, 13, 7, 0.85);
+  --intro-message-text: white;
+  --intro-button-background: rgba(36, 16, 4, 0.85);
+  --intro-button-border: 2px solid #6ef1a5;
+  --intro-button-text-color: white;
+  --intro-button-hover-background: rgba(19, 7, 1, 0.918);
 }

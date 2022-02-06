@@ -29,7 +29,7 @@ export default function Intro() {
 
   return (
     <div>
-      <div className="intro-container" data-theme={theme}>
+      <div className="intro-container">
         <video loop autoPlay muted className="intro-video">
           <source src={DesktopIntro} type="video/mp4" />
         </video>
@@ -38,7 +38,7 @@ export default function Intro() {
         </video>
       </div>
 
-      <div className="intro-text">
+      <div className="intro-text" data-theme={theme}>
         <p>Meet in the middle and discover somewhere new</p>
         <button className="intro-button" onClick={() => routeChange()}>
           Get started
@@ -46,7 +46,7 @@ export default function Intro() {
         {"\n"}
 
         <button className="intro-button intro-container" onClick={switchTheme}>
-          Switch to {theme === "light" ? "Dark" : "Light"} Theme
+          {theme === "light" ? "Dark" : "Light"} Mode
         </button>
       </div>
     </div>
