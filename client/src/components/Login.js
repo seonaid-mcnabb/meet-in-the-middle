@@ -8,6 +8,7 @@ import {
 } from "firebase/auth";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import Logo from "../images/meet-logo.png";
+import DarkLogo from "../images/white-logo-meet-in-the-middle.png";
 import Fade from "react-reveal/Fade";
 import useLocalStorage from "use-local-storage"; //imported for the purpose of toggling light/dark themes
 
@@ -94,7 +95,12 @@ export default function Login() {
     <div className="login-body" data-theme={theme}>
       <div className="login-container">
         <Fade bottom>
-          <img src={Logo} className="login-logo" alt="" />
+          {theme === "light" ? (
+            <img src={Logo} className="login-logo" alt="" />
+          ) : (
+            <img src={DarkLogo} className="login-logo" alt="" />
+          )}
+
           <h4>Register</h4>
           {/* REGISTRATION FORM */}
           <form className="login-form">
