@@ -5,17 +5,32 @@ import Me from "../images/photo-me.jpg";
 import Search from "../images/Search.gif";
 import Favourite from "../images/Favourites.gif";
 import Rating from "../images/Ratings.gif";
+import useLocalStorage from "use-local-storage"; //imported for the purpose of toggling light/dark themes
 
 export default function About() {
+  //for testing purposes, have imported these here but think
+  //they can be removed at a later time (mode should be chose on homepage?)
+  let defaultDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  let [theme, setTheme] = useLocalStorage(
+    "theme",
+    defaultDark ? "dark" : "light"
+  );
+
+  const switchTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+  };
+  //
+
   return (
-    <div className="about-body">
+    <div className="about-body" data-theme={theme}>
       <LogoNav />
 
       <Fade bottom>
         <div className="about-container">
           <div className="row">
             <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-              <p>
+              <p className="app-explanation-text">
                 If you’re looking to go <b>somewhere new</b>, if you’re meeting
                 someone who <b>lives on the other side of town</b> or even the
                 country, if you’re a couple going on a <b>date night</b>,
@@ -28,7 +43,7 @@ export default function About() {
                 </b>
               </p>
 
-              <p>
+              <p className="app-explanation-text">
                 Meet in the Middle is an app that does what it says on the tin…
                 simply type in two locations, select a place category and radius
                 and hit Search. The app will calculate the midpoint of the two
@@ -39,7 +54,7 @@ export default function About() {
 
               <img src={Search} alt="" className="about-gifs" />
 
-              <p>
+              <p className="app-explanation-text">
                 If you like the look of a place, you can click the heart icon on
                 each card and the place will be added to your Favourites. Or if
                 you don’t find a place that appeals to you, you can clear the
@@ -48,7 +63,7 @@ export default function About() {
 
               <img src={Favourite} alt="" className="about-gifs" />
 
-              <p>
+              <p className="app-explanation-text">
                 After you’ve met in the middle, you can go to your Favourites
                 page and rate the place you visited. You can give it an overall
                 star rating out of 5, rate it on its price range also recommend
@@ -74,19 +89,29 @@ export default function About() {
               </p>
               <p className="about-text">
                 Meet in the Middle is a student project that was created at{" "}
-                <a href="http://codeop.tech">CodeOp</a>, a full stack
-                development bootcamp in Barcelona (January 2022). I created it
-                because I'm always wanting to try new things and places. Now
-                that I live in a different area to my loved ones, it's always
-                helpful to meet at a convenient place in the middle when we
-                reunite. I hope that others find it as useful.
+                <a className="about-links" href="http://codeop.tech">
+                  CodeOp
+                </a>
+                , a full stack development bootcamp in Barcelona (January 2022).
+                I created it because I'm always wanting to try new things and
+                places. Now that I live in a different area to my loved ones,
+                it's always helpful to meet at a convenient place in the middle
+                when we reunite. I hope that others find it as useful.
               </p>
               <p className="about-text">
                 I'm always looking to develop it further so if you have any
-                ideas or feedback, please <a href="/contact">get in touch</a>.
-                Please check out my{" "}
-                <a href="https://github.com/AlexJackson01">Github</a> for more
-                info on where I want to take this next.
+                ideas or feedback, please{" "}
+                <a className="about-links" href="/contact">
+                  get in touch
+                </a>
+                . Please check out my{" "}
+                <a
+                  className="about-links"
+                  href="https://github.com/AlexJackson01"
+                >
+                  Github
+                </a>{" "}
+                for more info on where I want to take this next.
               </p>
             </div>
           </div>
