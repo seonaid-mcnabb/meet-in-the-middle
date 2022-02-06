@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
 import { configure } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import Contact from "./Contact";
@@ -42,6 +42,17 @@ emailSent--> updated onSubmit
 */
 
 configure({ adapter: new Adapter() });
+
+//this solves the "matchMedia" not a function issue, but  we return to the "invalid hook call" error
+window.matchMedia =
+  window.matchMedia ||
+  function () {
+    return {
+      matches: false,
+      addListener: function () {},
+      removeListener: function () {},
+    };
+  };
 
 describe("Testing the Contact Component", () => {
   let wrapper;
