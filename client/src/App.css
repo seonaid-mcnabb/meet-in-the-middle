@@ -5,24 +5,34 @@ body {
 }
 
 /* NAVBAR STYLING */
-
+/*Contains the stlying for navigation bar*/
 .navbar {
   background-color: #f7f1d5 !important;
   padding-right: 20px;
 }
 
+/*Contains styling for the logo
+Adds it to the left
+Adjusts width
+Pushes slightly away from edge of page on left*/
 .logo-image {
   width: 120px;
   align-items: left;
   margin-left: 20px;
 }
 
+/*Styles the links by adjusting their side margins,
+alignment, and margin on bottom*/
 .navbar-nav {
   text-align: left;
   padding-left: 20px;
   margin-bottom: 10px;
 }
 
+/*Adjusts the greeting area
+Keeps user's name or email in same place
+Adjusts how text is displayed
+*/
 .user-greeting {
   position: absolute;
   top: 0%;
@@ -31,6 +41,8 @@ body {
   font-weight: 300;
 }
 
+/*Styles logout button to left of user greeting
+adjusts colors, position, text style, transition*/
 .logout-button {
   /* position: absolute; */
   /* right: 0%; */
@@ -44,6 +56,7 @@ body {
   color: #62371c !important;
 }
 
+/*Determines color change on hover*/
 .logout-button:hover {
   background-color: #77c29e !important;
   color: #f7f1d5 !important;
@@ -57,6 +70,10 @@ body {
 
 /* HOME PAGE STYLING */
 
+/*Sets baackground image
+settings for how background is displayed
+size: contain?
+applies to body of return function in App.js*/
 .home-body {
   background: url("https://images.pexels.com/photos/2303337/pexels-photo-2303337.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-size: contain;
@@ -64,6 +81,9 @@ body {
   /* height: 2700px; */
 }
 
+/*Styles homepage container
+(the greenish box behind the input form)
+*/
 .container {
   padding: 50px;
   text-align: center;
@@ -75,6 +95,8 @@ body {
     margin-left: 30px; */
 }
 
+/*Styles form container
+*/
 .input-form {
   background-color: #f7f1d5;
   padding: 20px;
@@ -82,6 +104,8 @@ body {
   box-shadow: 3px 3px #62371c;
 }
 
+/*Styles the search button under form input
+*/
 .search-btn {
   color: #62371c;
   text-align: center;
@@ -93,11 +117,15 @@ body {
   border: 2px solid #77c29e;
 }
 
+/*Styles the hover behavior of the search button
+*/
 .search-btn:hover {
   color: #f7f1d5;
   background-color: #77c29e;
 }
 
+/*Not totally sure, seems to style background
+*/
 input {
   margin-bottom: 10px;
   margin-right: 10px;
@@ -105,16 +133,20 @@ input {
   border: 1px solid #d3604a;
 }
 
+/*Styles the drop-down menus on input form
+*/
 select.form-select {
   font-size: 13px;
   padding-top: 7px;
   padding-bottom: 10px;
 }
-
+/*Styles font size in drop-down menu
+*/
 option {
   font-size: 13px;
 }
-
+/*Styles the text that displays as users type in their two inputs
+*/
 .midpoint-msg {
   text-align: center;
   margin-top: 70px;
@@ -123,22 +155,26 @@ option {
   color: #f7f1d5;
 }
 
+/*Not entirely sure*/
 .login-msg {
   margin-top: 80px;
   text-align: center;
   color: #f7f1d5;
 }
 
+/*link styling*/
 a {
   color: #62371c;
 }
 
+/*styles the icon that is displayed on loading*/
 .loading-earth {
   transform: rotateY(0.5turn);
   color: #62371c;
   margin-top: 20px;
 }
 
+/*adjdust background width and height to different screen sizes*/
 @media (min-width: 575px) and (max-width: 970px) {
   .home-body {
     background: url("https://images.pexels.com/photos/2303337/pexels-photo-2303337.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
@@ -168,6 +204,7 @@ a {
   margin-bottom: 20px;
 }
 
+/* styles text on clicking marker (shows name & address)*/
 .map-popup {
   color: #62371c;
   font-family: "Montserrat", sans-serif;
@@ -178,6 +215,7 @@ a {
   background-color: rgba(119, 194, 158, 0);
 }
 
+/*adjusts for screen styling*/
 @media (max-width: 575px) {
   .leaflet-container {
     width: 70vw;
@@ -189,6 +227,7 @@ a {
 
 /* NEARBY SEARCH STYLING */
 
+/* styles the div which contains list of nearby places */
 .places-list {
   display: flex;
   flex-wrap: wrap;
@@ -199,6 +238,7 @@ a {
   padding-bottom: 20px;
 }
 
+/* styles the placecards when list is generated */
 .place-card {
   background-color: #f7f1d5;
   padding: 20px;
@@ -211,20 +251,24 @@ a {
   margin-bottom: 20px;
 }
 
+/* styles visit their website */
 .place-url {
   font-size: 11px;
   margin-bottom: 10px;
 }
 
+/* linkes*/
 a {
   color: #62371c;
 }
 
+/* styles links on hover*/
 a:hover {
   color: #62371c;
   font-weight: bold;
 }
 
+/* styles favourite-heart*/
 .favourite-heart,
 .heart {
   height: 30px;
@@ -232,11 +276,13 @@ a:hover {
   padding-top: 20px;
 }
 
+/* styles the font size of list items (in this case, reviews/ratings*/
 li {
   font-size: 13px;
   padding-top: 5px;
 }
 
+/*Stlyes boxes that contain links to directions*/
 .directions-btn {
   color: #62371c;
   text-align: center;
@@ -249,16 +295,19 @@ li {
   border: 2px solid #77c29e;
 }
 
+/*Styles h5 elements: in this case, the title of POI on card*/
 h5 {
   color: #77c29e;
 }
 
+/*addjusts size appearance of stars*/
 .star-rating {
   width: 50%;
 }
 
 /* INTRO PAGE STYLING */
 
+/*styles the size and positioning of the video in the background on intro*/
 .intro-video {
   width: 100%;
   height: 100%;
@@ -271,6 +320,7 @@ h5 {
   z-index: -1;
 }
 
+/*styles the text that says "meet in the middle and discover somewhere new"*/
 .intro-text {
   background-color: #f7f1d5;
   position: absolute;
@@ -285,10 +335,12 @@ h5 {
   /* width: 100%; */
 }
 
+/*makes clicking and scrolling smooth rather than jumpy?*/
 html {
   scroll-behavior: smooth;
 }
 
+/*styles the appearance of the intro button*/
 .intro-button {
   color: #62371c;
   text-align: center;
@@ -300,15 +352,19 @@ html {
   border: 2px solid #77c29e;
 }
 
+/*adjusts behavior of intro button on hover*/
 .intro-button:hover {
   color: #f7f1d5;
   background-color: #77c29e;
 }
 
+/*adjusts heigh of intro image
+^^I don't see this used in the code*/
 .intro-image {
   height: 100px;
 }
 
+/*Accessibility for different screen sizes*/
 @media (min-aspect-ratio: 16/9) {
   .intro-video {
     width: 100%;
@@ -318,7 +374,7 @@ html {
     display: none;
   }
 }
-
+/*Accessbiility for different screen sizes*/
 @media (max-aspect-ratio: 16/9) {
   .intro-video {
     width: auto;
@@ -329,6 +385,7 @@ html {
   }
 }
 
+/*Accessbility for different screen sizes*/
 @media (max-width: 480px) {
   .intro-video {
     display: none;
@@ -347,18 +404,19 @@ html {
 }
 
 /* LOGIN PAGE STYLING */
-
+/*styles body of whole login page (adds background)*/
 .login-body {
   background: url("https://images.pexels.com/photos/1058277/pexels-photo-1058277.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
 }
 
+/*styles the container (ie white)*/
 .login-container {
   margin-left: 50px;
   margin-right: 50px;
   background-color: rgba(247, 241, 213, 0.95);
   height: 1000px;
 }
-
+/*styles the form inputs (email & p/w)*/
 .login-form {
   background-color: #77c29e;
   padding: 20px;
@@ -370,6 +428,7 @@ html {
   box-shadow: 6px 6px #62371c;
 }
 
+/*styles display of the meet in the middle logo*/
 .login-logo {
   display: block;
   margin-left: auto;
@@ -378,6 +437,7 @@ html {
   height: 250px;
 }
 
+/*styles register and login buttons*/
 .login-btn {
   color: #f7f1d5;
   text-align: center;
@@ -390,6 +450,7 @@ html {
   border: 2px solid #77c29e;
 }
 
+/*styles behavior of these buttons on hover*/
 .login-btn:hover {
   color: #62371c;
   text-align: center;
@@ -401,16 +462,20 @@ html {
   border: 2px solid #77c29e;
 }
 
+/*styles all h4 elements to be centered
+(they are displayed above the input container*/
 h4 {
   text-align: center;
 }
 
+/*styles errorLogin message*/
 .login-error {
   color: #62371c;
   font-weight: bold;
   text-align: center;
 }
 
+/*styles the login with google button displayed at top of login*/
 .login-with-google-btn {
   transition: background-color 0.3s, box-shadow 0.3s;
   padding: 12px 16px 12px 42px;
@@ -430,20 +495,24 @@ h4 {
   background-position: 12px 11px;
 }
 
+/*styles hover over google behavior*/
 .login-with-google-btn:hover {
   box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
+/*if accessible, background color will be white*/
 .login-with-google-btn:active {
   background-color: #eeeeee;
 }
 
+/*not quite sure what this one does*/
 .login-with-google-btn:focus {
   outline: none;
   box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.25),
     0 0 0 3px #c8dafc;
 }
 
+/*style behavior if this option is disabled*/
 .login-with-google-btn:disabled {
   filter: grayscale(100%);
   background-color: #ebebeb;
@@ -451,18 +520,20 @@ h4 {
   cursor: not-allowed;
 }
 
+/*changes size of this login button depending on screen size*/
 @media (max-width: 575px) {
   .login-with-google-btn {
     width: 70%;
   }
 }
 
+/*removes the bullet points from ul element*/
 ul {
   list-style-type: none;
 }
 
 /* ABOUT STYLING */
-
+/*sets background of about body*/
 .about-body {
   background: url("https://images.pexels.com/photos/6267/menu-restaurant-vintage-table.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-size: contain;
@@ -470,6 +541,7 @@ ul {
   width: auto;
 }
 
+/*styles the container*/
 .about-container {
   background-color: rgba(119, 194, 158, 0.95);
   margin-top: 90px;
@@ -479,17 +551,20 @@ ul {
   text-align: center;
 }
 
+/*Styles "about me" title above photo*/
 .about-title {
   margin-top: 20px;
   font-size: 25px;
 }
 
+/*styles appearance of about photo*/
 .me-photo {
   height: 200px;
   margin: 0 auto;
   margin-bottom: 20px;
 }
 
+/*styles the gifs included in about me (ratings, search, etc)*/
 .about-gifs {
   height: 200px;
   /* width: auto; */
@@ -497,6 +572,7 @@ ul {
   margin-bottom: 10px;
 }
 
+/*changes gif height and body for smaller screens?*/
 @media (max-width: 575px) {
   .about-gifs {
     height: 150px;
@@ -509,18 +585,21 @@ ul {
   }
 }
 
+/*styles the paragraph text in About component*/
 .about-text {
   font-size: 13px;
 }
 
 /* CONTACT STYLING */
 
+/*styñes background of contact page*/
 .contact-body {
   background: url("https://images.pexels.com/photos/2079438/pexels-photo-2079438.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-size: contain;
   height: 100%;
 }
 
+/*styles the container*/
 .contact-container {
   padding: 50px;
   text-align: center;
@@ -531,7 +610,7 @@ ul {
   margin-right: 30px;
   margin-left: 30px;
 }
-
+/*adjustments for screen size*/
 @media (max-width: 770px) {
   .contact-body {
     background: url("https://images.pexels.com/photos/2079438/pexels-photo-2079438.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
@@ -539,6 +618,7 @@ ul {
   }
 }
 
+/*adjustments for screen size*/
 @media (max-width: 575px) {
   .contact-body {
     background: url("https://images.pexels.com/photos/2079438/pexels-photo-2079438.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
@@ -547,6 +627,7 @@ ul {
   }
 }
 
+/*adults how linkedIn and github icons are displayed*/
 .contact-icons {
   height: 50px;
   padding: 2px;
@@ -554,6 +635,7 @@ ul {
   margin: 0 auto;
 }
 
+/*styles all h6 elements (connect with me & send me a msg) */
 h6 {
   text-align: center;
   margin-top: 10px;
@@ -561,6 +643,7 @@ h6 {
   padding: 5px;
 }
 
+/*styles the contact form*/
 .contact-form {
   /* padding: 20px 20px 20px 0px; */
   margin-top: 50px;
@@ -569,15 +652,18 @@ h6 {
   display: flex;
 }
 
+/*styles icons div*/
 .icons {
   padding-bottom: 50px;
 }
 
+/*styles text upon success email sent*/
 .contact-confirmation {
   text-align: center;
   margin-top: 10px;
 }
 
+/*styles the contact div that contains the send button*/
 .contact-div {
   color: #62371c;
   text-align: center;
@@ -586,6 +672,7 @@ h6 {
 
 /* FAVOURITES STYLING */
 
+/*edits background*/
 .favourites-body {
   background: url("https://images.pexels.com/photos/683039/pexels-photo-683039.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-size: contain;
@@ -593,6 +680,7 @@ h6 {
   text-align: center;
 }
 
+/*styles the container for all favorite cards*/
 .favourites-container {
   background-color: rgba(119, 194, 158, 0.95);
   margin-top: 90px;
@@ -603,6 +691,7 @@ h6 {
   /* padding: 90px; */
 }
 
+/*styles the div that contains the favourites card*/
 .favourites-list {
   display: flex;
   flex-wrap: wrap;
@@ -616,6 +705,7 @@ h6 {
   text-align: center;
 }
 
+/*styles the div that contains the favourites card*/
 .favourites-card {
   background-color: #f7f1d5;
   padding: 20px;
@@ -627,6 +717,7 @@ h6 {
   box-shadow: 3px 3px #62371c;
 }
 
+/*adjusts list and cards for different screen sizes*/
 @media (max-width: 1100px) {
   .favourites-list {
     display: flex;
@@ -651,6 +742,7 @@ h6 {
   }
 }
 
+/*adjuststs the favourite container for diff screen size*/
 @media (max-width: 520px) {
   .favourites-container {
     margin-right: 0px;
@@ -659,6 +751,7 @@ h6 {
   }
 }
 
+/*styles all h3 elements (your favs, and recent reviews)*/
 h3 {
   text-align: center;
   color: #62371c;
@@ -666,6 +759,7 @@ h3 {
   padding-bottom: 30px;
 }
 
+/*adjusts div that contains recent reviews*/
 .ratings-list {
   display: flex;
   flex-wrap: wrap;
@@ -676,6 +770,7 @@ h3 {
   text-align: center;
 }
 
+/*styles the submitted ratings cards*/
 .ratings-card {
   background-color: #f7f1d5;
   padding: 20px;
@@ -688,6 +783,7 @@ h3 {
   box-shadow: 6px 6px #62371c;
 }
 
+/*styles the text/list in the favourites card*/
 .favourites-info {
   padding: 20px;
   list-style-type: none;
@@ -695,6 +791,7 @@ h3 {
   /* padding-left: 50px; */
 }
 
+/*can't find this being applied anywhere in component*/
 .favourites-search {
   padding: 20px;
   list-style-type: none;
@@ -702,35 +799,42 @@ h3 {
   /* padding-left: 50px; */
 }
 
+/*styles the chekcboxes in the input form*/
 .recommendations {
   padding: 10px;
   list-style-type: none;
   text-align: left;
 }
 
+/*would hover over undo link but currently disabled bc of code*/
 .rating-link:hover {
   color: #f7f1d5;
   cursor: pointer;
 }
 
+/*styles remove from favourites link*/
 .remove-link:hover {
   color: #77c29e;
   cursor: pointer;
 }
 
+/*styles chevron icon*/
 .rating-arrow {
   color: #62371c;
   cursor: pointer;
 }
 
+/*styles when star is clicked*/
 .on {
   color: #62371c;
 }
 
+/*styles when star is not clicked*/
 .off {
   color: #f7f1d5;
 }
 
+/*can't find corresponding code for this*/
 .reviews-text {
   padding-top: 50px;
   padding-bottom: 20px;
@@ -738,6 +842,7 @@ h3 {
   text-align: center;
 }
 
+/*styles text and display of ratings form*/
 .ratings {
   display: inline;
   margin: 0 auto;
@@ -749,12 +854,14 @@ h3 {
   color: #62371c;
 }
 
+/*not totally sure which button this corresponds to but think its the stars*/
 button {
   background: none;
   border: none;
   text-align: center;
 }
 
+/*styles the submit button*/
 .ratings-btn {
   color: #62371c;
   text-align: center;
@@ -767,11 +874,13 @@ button {
   border: 2px solid #77c29e;
 }
 
+/*styles on hover behavior of submit button*/
 .ratings-btn:hover {
   color: #f7f1d5;
   background-color: #62371c;
 }
 
+/*styles "no ratings added yet!"*/
 .ratings-text {
   text-align: center;
   margin: 0 auto;
@@ -779,6 +888,7 @@ button {
   margin-bottom: 50px;
 }
 
+/*can't find corresponding code for this css*/
 .favourites-remove {
   font-size: 11px;
 }
