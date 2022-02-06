@@ -760,7 +760,7 @@ h6 {
 
 /*styles the container for all favorite cards*/
 .favourites-container {
-  background-color: rgba(119, 194, 158, 0.95);
+  background-color: var(--homepage-container-background);
   margin-top: 90px;
   margin-right: 30px;
   margin-left: 30px;
@@ -785,14 +785,14 @@ h6 {
 
 /*styles the div that contains the favourites card*/
 .favourites-card {
-  background-color: #f7f1d5;
+  background-color: var(--homepage-input-form-container-background);
   padding: 20px;
   width: 1000px;
   margin: 2px;
   margin: 0 auto;
   display: flex;
   text-align: center;
-  box-shadow: 3px 3px #62371c;
+  box-shadow: var(--homepage-input-form-box-shadow);
 }
 
 /*adjusts list and cards for different screen sizes*/
@@ -808,7 +808,7 @@ h6 {
     padding-bottom: 20px;
   }
   .favourites-card {
-    background-color: #f7f1d5;
+    background-color: var(--homepage-input-form-container-background);
     padding: 20px;
     width: 350px;
     margin: 2px;
@@ -832,7 +832,7 @@ h6 {
 /*styles all h3 elements (your favs, and recent reviews)*/
 h3 {
   text-align: center;
-  color: #62371c;
+  color: var(--favourites-h3-title-color);
   padding-top: 50px;
   padding-bottom: 30px;
 }
@@ -850,7 +850,7 @@ h3 {
 
 /*styles the submitted ratings cards*/
 .ratings-card {
-  background-color: #f7f1d5;
+  background-color: var(--homepage-input-form-container-background);
   padding: 20px;
   width: 300px;
   height: 70vh;
@@ -858,7 +858,7 @@ h3 {
   margin: 0 auto;
   display: inline;
   justify-content: space-between;
-  box-shadow: 6px 6px #62371c;
+  box-shadow: var(--homepage-input-form-box-shadow);
 }
 
 /*styles the text/list in the favourites card*/
@@ -866,6 +866,7 @@ h3 {
   padding: 20px;
   list-style-type: none;
   text-align: center;
+  color: var(--favourites-h3-title-color);
   /* padding-left: 50px; */
 }
 
@@ -894,15 +895,26 @@ h3 {
   cursor: pointer;
 }
 
+.rating-details {
+  color: white;
+}
+
+.date-time-title {
+  color: var(--favourites-date-time-color);
+}
+
+.remove-link {
+  color: var(--favourites-remove-link-color);
+}
 /*styles remove from favourites link*/
 .remove-link:hover {
-  color: #77c29e;
+  color: var(--favourites-remove-link-hover-color);
   cursor: pointer;
 }
 
 /*styles chevron icon*/
 .rating-arrow {
-  color: #62371c;
+  color: var(--favourites-rating-arrow-color);
   cursor: pointer;
 }
 
@@ -945,15 +957,15 @@ button {
 
 /*styles the submit button*/
 .ratings-btn {
-  color: #62371c;
+  color: var(--homepage-search-button-text);
   text-align: center;
-  background-color: #f7f1d5;
+  background-color: var(--homepage-search-button-background);
   width: 100px;
   margin-top: 20px;
   margin-bottom: 20px;
   text-transform: uppercase;
   transition: 0.5s;
-  border: 2px solid #77c29e;
+  border: var(--homepage-search-button-border);
 }
 
 /*styles on hover behavior of submit button*/

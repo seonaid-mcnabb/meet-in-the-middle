@@ -13,6 +13,13 @@ code {
 }
 
 :root {
+  /*Contains default values for light theme on Favourites component*/
+  --favourites-h3-title-color: #62371c;
+  --favourites-rating-arrow-color: #62371c;
+  --favourites-remove-link-color: #62371c;
+  --favourites-remove-link-hover-color: #77c29e;
+  --favourites-date-time-color: #77c29e;
+
   /*Contains default values for light theme on NearbySearch component*/
   --place-card-background-color: #f7f1d5;
   --place-card-box-shadow: 3px 3px #62371c;
@@ -99,6 +106,13 @@ code {
   --homepage-select-form-border-color: 1px solid black;
 }
 [data-theme="dark"] {
+  /*Contains default values for light theme on Favourites component*/
+  --favourites-h3-title-color: white;
+  --favourites-rating-arrow-color: white;
+  --favourites-remove-link-color: rgb(255, 255, 255);
+  --favourites-remove-link-hover-color: #4bddb9;
+  --favourites-date-time-color: #4bddb9;
+
   /*Contains default values for light theme on NearbySearch component*/
   --place-card-background-color: rgb(36, 16, 4, 0.9);
   --place-card-box-shadow: 6px 6px rgb(0, 0, 0, 0.75);

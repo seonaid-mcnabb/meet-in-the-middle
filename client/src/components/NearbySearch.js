@@ -295,7 +295,9 @@ export default function NearbySearch({ nearby, user }) {
                       }}
                     />
                   )}
-                  {place.favourite && <p>Added to Favourites!</p>}
+                  {place.favourite && (
+                    <p className="reviews-text">Added to Favourites!</p>
+                  )}
 
                   <li>
                     <EmailShareButton

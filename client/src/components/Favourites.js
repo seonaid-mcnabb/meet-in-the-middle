@@ -8,8 +8,23 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import Fade from "react-reveal/Fade";
+import useLocalStorage from "use-local-storage"; //imported for the purpose of toggling light/dark themes
 
 export default function Favourites() {
+  //for testing purposes, have imported these here but think
+  //they can be removed at a later time (mode should be chose on homepage?)
+  let defaultDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  let [theme, setTheme] = useLocalStorage(
+    "theme",
+    defaultDark ? "dark" : "light"
+  );
+
+  const switchTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+  };
+  //
+
   let [loading, setLoading] = useState(false);
   //loading state of main page
   let [user, setUser] = useState({});
@@ -508,13 +523,13 @@ export default function Favourites() {
           <div className="ratings-list" key={rating.place_id}>
             <ul className="ratings-card">
               <li className="favourites-info">
-                <h5>{rating.timeDate}</h5>
+                <h5 className="date-time-title">{rating.timeDate}</h5>
                 <h6>{rating.name}</h6>
                 <h6>{rating.rating}/5</h6>
                 <h6>{rating.priceRange}</h6>
               </li>
               {rating.recommendations && (
-                <p>
+                <p className="rating-details">
                   You recommended this place for:
                   {Object.entries(rating.recommendations).map(
                     ([key, value]) => {
@@ -540,7 +555,7 @@ export default function Favourites() {
   };
 
   return (
-    <div className="favourites-body">
+    <div className="favourites-body" data-theme={theme}>
       <LogoNav />
       <div className="favourites-container">
         <h3>Your Favourites</h3>
