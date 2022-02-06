@@ -10,9 +10,24 @@ import { faHeart as farHeart } from "@fortawesome/free-regular-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 import { EmailShareButton } from "react-share";
+import useLocalStorage from "use-local-storage"; //imported for the purpose of toggling light/dark themes
 
 //this has imported nearby and user as props
 export default function NearbySearch({ nearby, user }) {
+  //for testing purposes, have imported these here but think
+  //they can be removed at a later time (mode should be chose on homepage?)
+  let defaultDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  let [theme, setTheme] = useLocalStorage(
+    "theme",
+    defaultDark ? "dark" : "light"
+  );
+
+  const switchTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+  };
+  //
+
   let [liked, setLiked] = useState(false);
   let [favourite, setFavourite] = useState({
     address: null,
@@ -96,7 +111,7 @@ export default function NearbySearch({ nearby, user }) {
               <div className="places-list" key={place.id}>
                 <ul className="place-card">
                   <li>
-                    <h5>{place.name}</h5>
+                    <h5 className="place-name">{place.name}</h5>
                   </li>
                   <li>
                     <h6>{place.address}</h6>
@@ -228,11 +243,11 @@ export default function NearbySearch({ nearby, user }) {
                   {/* If no written reviews are available, it will also say so  */}
                   <li>
                     {place.reviews ? (
-                      <p>
+                      <p className="reviews-text">
                         <em>Others have said: {place.reviews[0].text}</em>
                       </p>
                     ) : (
-                      <p>
+                      <p className="place-rating">
                         <em>{"Reviews not available"}</em>
                       </p>
                     )}
@@ -306,7 +321,7 @@ export default function NearbySearch({ nearby, user }) {
   };
 
   return (
-    <div className="nearby-body">
+    <div className="nearby-body" data-theme={theme}>
       <div className="places-list">{renderNearby()}</div>
     </div>
   );

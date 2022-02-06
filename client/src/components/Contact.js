@@ -5,10 +5,25 @@ import { init } from "@emailjs/browser";
 import Github from "../images/github.png";
 import LinkedIn from "../images/linkedin.png";
 import Fade from "react-reveal/Fade";
+import useLocalStorage from "use-local-storage"; //imported for the purpose of toggling light/dark themes
 
 init("user_HlsvJEpkUfjym2nM9POQf"); // emailJS user for sending emails (what is this?)
 
 export default function Contact() {
+  //for testing purposes, have imported these here but think
+  //they can be removed at a later time (mode should be chose on homepage?)
+  let defaultDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  let [theme, setTheme] = useLocalStorage(
+    "theme",
+    defaultDark ? "dark" : "light"
+  );
+
+  const switchTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+  };
+  //
+
   let [emailSent, setEmailSent] = useState("");
 
   const form = useRef(); //useRef allows you to directly create a referenceto the DOM element in a function component
@@ -35,7 +50,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="contact-body">
+    <div className="contact-body" data-theme={theme}>
       <LogoNav />
       <Fade bottom>
         <div className="contact-container">

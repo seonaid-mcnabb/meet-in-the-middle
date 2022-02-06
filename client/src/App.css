@@ -194,7 +194,7 @@ a {
 /*styles the icon that is displayed on loading*/
 .loading-earth {
   transform: rotateY(0.5turn);
-  color: #62371c;
+  color: var(--loading-earth-icon-color);
   margin-top: 20px;
 }
 
@@ -264,14 +264,14 @@ a {
 
 /* styles the placecards when list is generated */
 .place-card {
-  background-color: #f7f1d5;
+  background-color: var(--place-card-background-color);
   padding: 20px;
   width: 250px;
   height: 600px;
   margin: 2px;
   text-align: center;
   display: block;
-  box-shadow: 3px 3px #62371c;
+  box-shadow: var(--place-card-box-shadow);
   margin-bottom: 20px;
 }
 
@@ -283,12 +283,12 @@ a {
 
 /* linkes*/
 a {
-  color: #62371c;
+  color: var(--place-card-links);
 }
 
 /* styles links on hover*/
 a:hover {
-  color: #62371c;
+  color: var(--place-card-links-on-hover);
   font-weight: bold;
 }
 
@@ -296,10 +296,23 @@ a:hover {
 .favourite-heart,
 .heart {
   height: 30px;
-  color: #77c29e;
+  color: var(--place-card-heart-color);
   padding-top: 20px;
 }
 
+/*styles title of cards*/
+.place-name {
+  color: var(--place-name-color);
+}
+
+.place-rating {
+  color: var(--place-name-color);
+}
+
+/*styles text of displayed reviews*/
+.reviews-text {
+  color: var(--reviews-text-color) !important;
+}
 /* styles the font size of list items (in this case, reviews/ratings*/
 li {
   font-size: 13px;
@@ -310,13 +323,13 @@ li {
 .directions-btn {
   color: #62371c;
   text-align: center;
-  background-color: #f7f1d5;
+  background-color: var(--place-card-directions-button-background);
   width: 150px;
   margin-top: 10px;
   text-transform: uppercase;
   transition: 0.5s;
   font-size: 11px;
-  border: 2px solid #77c29e;
+  border: var(--place-card-directions-button-border);
 }
 
 /*Styles h5 elements: in this case, the title of POI on card*/
@@ -668,7 +681,7 @@ ul {
   padding: 50px;
   text-align: center;
   margin: 0 auto;
-  background-color: rgba(119, 194, 158, 0.95);
+  background-color: var(--homepage-container-background);
   margin-top: 90px;
   padding-bottom: 300px;
   margin-right: 30px;
@@ -705,14 +718,15 @@ h6 {
   margin-top: 10px;
   margin-bottom: 20px;
   padding: 5px;
+  color: var(--contact-page-h6-elements);
 }
 
 /*styles the contact form*/
 .contact-form {
   /* padding: 20px 20px 20px 0px; */
   margin-top: 50px;
-  background-color: rgba(247, 241, 213, 0.95);
-  box-shadow: 3px 3px #62371c;
+  background-color: var(--homepage-input-form-container-background);
+  box-shadow: var(--homepage-input-form-box-shadow);
   display: flex;
 }
 

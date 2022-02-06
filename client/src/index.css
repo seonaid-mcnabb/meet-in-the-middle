@@ -13,7 +13,21 @@ code {
 }
 
 :root {
-  /*Contains default values for light them on About component*/
+  /*Contains default values for light theme on NearbySearch component*/
+  --place-card-background-color: #f7f1d5;
+  --place-card-box-shadow: 3px 3px #62371c;
+  --loading-earth-icon-color: #62371c;
+  --place-card-heart-color: #77c29e;
+  --place-name-color: #77c29e;
+  --reviews-text-color: #62371c;
+  --place-card-links: #62371c;
+  --place-card-links-on-hover: #62371c;
+  --place-card-directions-button-background: #f7f1d5;
+  --place-card-directions-button-border: 2px solid #77c29e;
+
+  /*Contains default values for light theme on Contact component*/
+  --contact-page-h6-elements: #62371c;
+  /*Contains default values for light theme on About component*/
   --about-app-text-color: #62371c;
   --about-me-text-color: #62371c;
   --about-me-title-color: #62371c;
@@ -85,6 +99,21 @@ code {
   --homepage-select-form-border-color: 1px solid black;
 }
 [data-theme="dark"] {
+  /*Contains default values for light theme on NearbySearch component*/
+  --place-card-background-color: rgb(36, 16, 4, 0.9);
+  --place-card-box-shadow: 6px 6px rgb(0, 0, 0, 0.75);
+  --loading-earth-icon-color: #4bddb9;
+  --place-card-heart-color: #4bddb9;
+  --place-name-color: #4bddb9;
+  --reviews-text-color: white;
+  --place-card-links: white;
+  --place-card-links-on-hover: rgb(214, 131, 79);
+  --place-card-directions-button-background: rgb(36, 16, 4, 0.9);
+  --place-card-directions-button-border: 1px solid rgb(214, 131, 79);
+
+  /*Contains default values for dark theme on contact component*/
+  --contact-page-h6-elements: white;
+
   /*Contains default values for dark theme on About component*/
   --about-app-text-color: white;
   --about-me-text-color: white;
