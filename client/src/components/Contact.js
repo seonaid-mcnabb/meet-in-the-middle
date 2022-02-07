@@ -3,7 +3,9 @@ import LogoNav from "./LogoNav";
 import emailjs from "@emailjs/browser";
 import { init } from "@emailjs/browser";
 import Github from "../images/github.png";
+import GithubWhite from "../images/githubwhite.png";
 import LinkedIn from "../images/linkedin.png";
+import LinkedInWhiteIcon from "../images/linkedinwhite.png";
 import Fade from "react-reveal/Fade";
 import useLocalStorage from "use-local-storage"; //imported for the purpose of toggling light/dark themes
 
@@ -58,13 +60,26 @@ export default function Contact() {
             <div className="icons col-lg-6 col-md-6 col-sm-12 col-xs-12">
               <h6>Connect with me:</h6>
               <a href="https://github.com/AlexJackson01" target="_blank">
-                <img src={Github} className="contact-icons" alt="" />
+                {theme === "light" ? (
+                  <img src={Github} className="contact-icons" alt="" />
+                ) : (
+                  <img src={GithubWhite} className="contact-icons" alt="" />
+                )}
               </a>
+
               <a
                 href="https://www.linkedin.com/in/alex-j-jackson/"
                 target="_blank"
               >
-                <img src={LinkedIn} className="contact-icons" alt="" />
+                {theme === "light" ? (
+                  <img src={LinkedIn} className="contact-icons" alt="" />
+                ) : (
+                  <img
+                    src={LinkedInWhiteIcon}
+                    className="contact-icons"
+                    alt=""
+                  />
+                )}
               </a>
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
