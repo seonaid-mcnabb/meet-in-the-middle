@@ -6,6 +6,16 @@ import About from "./About";
 //test commit
 configure({ adapter: new Adapter() });
 
+window.matchMedia =
+  window.matchMedia ||
+  function () {
+    return {
+      matches: false,
+      addListener: function () {},
+      removeListener: function () {},
+    };
+  };
+
 describe("Testing the About Me Component", () => {
   let wrapper;
 
