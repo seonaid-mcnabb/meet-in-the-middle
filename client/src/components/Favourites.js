@@ -320,8 +320,9 @@ export default function Favourites() {
                       })}
                     {favourite.favourite && (
                       <div>
-                        <h6>Please give this place an overall rating</h6>{" "}
-                        (required)
+                        <h6>
+                          Please give this place an overall rating (required)
+                        </h6>{" "}
                         <select
                           required
                           className="form-select"

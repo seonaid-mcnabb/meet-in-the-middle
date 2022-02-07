@@ -106,24 +106,24 @@ code {
   --homepage-select-form-border-color: 1px solid black;
 }
 [data-theme="dark"] {
-  /*Contains default values for light theme on Favourites component*/
+  /*Contains default values for dark theme on Favourites component*/
   --favourites-h3-title-color: white;
   --favourites-rating-arrow-color: white;
   --favourites-remove-link-color: rgb(255, 255, 255);
   --favourites-remove-link-hover-color: #4bddb9;
   --favourites-date-time-color: #4bddb9;
 
-  /*Contains default values for light theme on NearbySearch component*/
-  --place-card-background-color: rgb(36, 16, 4, 0.9);
+  /*Contains default values for dark theme on NearbySearch component*/
+  --place-card-background-color: rgba(7, 6, 17, 0.986);
   --place-card-box-shadow: 6px 6px rgb(0, 0, 0, 0.75);
-  --loading-earth-icon-color: #4bddb9;
+  --loading-earth-icon-color: rgb(112, 121, 252);
   --place-card-heart-color: #4bddb9;
   --place-name-color: #4bddb9;
   --reviews-text-color: white;
   --place-card-links: white;
-  --place-card-links-on-hover: rgb(214, 131, 79);
-  --place-card-directions-button-background: rgb(36, 16, 4, 0.9);
-  --place-card-directions-button-border: 1px solid rgb(214, 131, 79);
+  --place-card-links-on-hover: white;
+  --place-card-directions-button-background: rgba(3, 2, 10, 0.986);
+  --place-card-directions-button-border: 1px solid rgb(112, 121, 252);
 
   /*Contains default values for dark theme on contact component*/
   --contact-page-h6-elements: white;
@@ -135,62 +135,62 @@ code {
   --about-me-link-color: white;
   --about-me-link-hover-color: rgb(161, 255, 255);
   /*Contains default values for dark theme on logonav component*/
-  --navbar-background-color: rgba(24, 13, 7);
+  --navbar-background-color: rgba(3, 2, 10, 0.986);
   --navbar-link-color: white;
   --navbar-greeting-color: white;
   --logout-button-text-color: white;
-  --logout-button-border: 1px solid rgb(59, 32, 15);
-  --logout-button-background-color: #3f996d;
-  --logout-button-hover-color: #3d7e5e;
+  --logout-button-border: 1px solid rgba(3, 2, 10, 0.986);
+  --logout-button-background-color: rgba(3, 8, 34, 0.986);
+  --logout-button-hover-color: rgba(8, 6, 19, 0.986);
 
   /*Contains default values for dark them on intro page*/
-  --intro-message-background: rgba(24, 13, 7, 0.85);
+  --intro-message-background: rgba(3, 2, 10, 0.9);
   --intro-message-text: white;
-  --intro-button-background: rgba(36, 16, 4, 0.85);
-  --intro-button-border: 1px solid rgb(214, 131, 79);
+  --intro-button-background: rgba(3, 2, 10, 0.986);
+  --intro-button-border: 1px solid rgb(112, 121, 252);
   --intro-button-text-color: white;
-  --intro-button-hover-background: rgba(19, 7, 1, 0.918);
+  --intro-button-hover-background: rgba(0, 0, 0, 0.986);
 
   /*Contains default values for dark theme on login page*/
-  --login-container-background: rgba(24, 13, 7, 0.9);
-  --login-form-container-background: rgb(36, 16, 4, 0.9);
+  --login-container-background: rgba(3, 2, 10, 0.986);
+  --login-form-container-background: rgba(7, 6, 17, 0.986);
   --login-form-h4: white;
   --login-box-shadow: 6px 6px rgb(0, 0, 0, 0.75);
-  --login-btn-background: rgba(36, 16, 4, 0.85);
+  --login-btn-background: rgba(3, 2, 10, 0.986);
   --login-btn-text-color: white;
-  --login-btn-border: 1px solid rgb(214, 131, 79);
+  --login-btn-border: 1px solid rgb(112, 121, 252);
   --login-error-msg: white;
   --login-account-link: white;
-  --login-btn-hover-background: rgba(19, 7, 1, 0.918);
-  --login-btn-hover-border: 1px solid rgb(214, 131, 79);
+  --login-btn-hover-background: rgba(3, 2, 10, 0.986);
+  --login-btn-hover-border: 1px solid rgb(165, 175, 252);
   --login-btn-hover-text: white;
-  --login-with-google-background-color: rgba(19, 7, 1, 0.918);
+  --login-with-google-background-color: rgba(3, 2, 10, 0.986);
   --login-with-google-text-color: white;
   --login-google-box-shadow: white;
   --click-google-background-color: black;
   --click-google-border-color: 0 -1px 0 rgba(0, 0, 0, 0.04),
-    0 2px 4px rgba(0, 0, 0, 0.25), 0 0 0 2px rgb(255, 163, 106);
+    0 2px 4px rgba(0, 0, 0, 0.25), 0 0 0 1px rgb(112, 121, 252);
 
   /*Contains Styling Values for dark theme login input boxes*/
-  --input-bkgrnd-color-default: rgba(19, 7, 1, 0.918);
-  --input-border-default: 1px solid rgb(214, 131, 79);
+  --input-bkgrnd-color-default: rgba(3, 2, 10, 0.986);
+  --input-border-default: 1px solid rgb(112, 121, 252);
   --input-text-color-default: white;
   --input-placeholder-color: white;
   --input-on-focus-text-color: white;
-  --input-on-focus-background: rgba(19, 7, 1, 0.918);
-  --input-on-focus-border: 2px solid rgb(214, 131, 79);
-  --input-on-focus-box-shadow: 0 0 3px #9b1f00;
+  --input-on-focus-background: rgba(7, 6, 17, 0.986);
+  --input-on-focus-border: 1px solid rgb(112, 121, 252);
+  --input-on-focus-box-shadow: 0 0 3px rgb(24, 30, 110);
   /*Contains default values for dark theme on hompage*/
-  --homepage-container-background: rgba(24, 13, 7, 0.9);
-  --homepage-input-form-container-background: rgb(36, 16, 4, 0.9);
+  --homepage-container-background: rgba(3, 2, 10, 0.9);
+  --homepage-input-form-container-background: rgba(7, 6, 17, 0.986);
   --homepage-input-form-box-shadow: 6px 6px rgb(0, 0, 0, 0.75);
   --homepage-input-form-label-color: white;
   --homepage-search-button-text: white;
-  --homepage-search-button-background: rgba(36, 16, 4, 0.85);
-  --homepage-search-button-border: 1px solid rgb(214, 131, 79);
+  --homepage-search-button-background: rgba(3, 2, 10, 0.986);
+  --homepage-search-button-border: 1px solid rgb(112, 121, 252);
   --homepage-search-hover-text: white;
-  --homepage-search-hover-background: rgba(19, 7, 1, 0.918);
-  --homepage-select-form-background: rgba(19, 7, 1, 0.918);
+  --homepage-search-hover-background: rgba(10, 7, 27, 0.986);
+  --homepage-select-form-background: rgba(3, 2, 10, 0.986);
   --homepage-select-form-text-color: white;
-  --homepage-select-form-border-color: 1px solid rgb(214, 131, 79);
+  --homepage-select-form-border-color: 1px solid rgb(112, 121, 252);
 }

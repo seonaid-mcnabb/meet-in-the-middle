@@ -971,7 +971,7 @@ button {
 /*styles on hover behavior of submit button*/
 .ratings-btn:hover {
   color: #f7f1d5;
-  background-color: #62371c;
+  background-color: rgba(0, 0, 0, 0.986);
 }
 
 /*styles "no ratings added yet!"*/
