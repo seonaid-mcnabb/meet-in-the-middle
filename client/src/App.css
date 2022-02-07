@@ -1,7 +1,7 @@
 body {
-  background-color: rgba(98, 55, 28, 0.85);
+  background-color: var(--body-background);
   font-family: "Montserrat", sans-serif;
-  color: #62371c;
+  color: var(--body-color);
 }
 
 /* NAVBAR STYLING */
@@ -920,7 +920,7 @@ h3 {
 
 /*styles when star is clicked*/
 .on {
-  color: #62371c;
+  color: var(--star-click-color);
 }
 
 /*styles when star is not clicked*/
