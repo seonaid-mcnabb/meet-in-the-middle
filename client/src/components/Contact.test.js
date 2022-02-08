@@ -63,4 +63,7 @@ describe("Testing the Contact Component", () => {
   it("should match the snapshot", () => {
     expect(wrapper.html()).toMatchSnapshot();
   });
+  it("should have img elements", () => {
+    wrapper.find("img");
+  });
 });
